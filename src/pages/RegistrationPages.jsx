@@ -163,7 +163,7 @@ const StepOne = (props) => {
                         /> </svg>
                       )}
                   </span>
-                  <ErrorMessage name="password" component="div" className="text-red-500" />
+                  <ErrorMessage name="password" component="div" className="text-red-500 text-xs" />
                 </div>
         </div>
         
@@ -193,8 +193,8 @@ const StepOne = (props) => {
 const stepTwoValidationSchema = yup.object().shape({
   full_name: yup.string().required('Required'),
   gender: yup.string().oneOf(['male', 'female'], 'Invalid gender').required('Required'),
-  country_code: yup.number().max(999, 'max three values').required('Required'),
-  phone: yup.number().required('Required'),
+  country_code: yup.number().max(999, 'country code cannot exceed three values').typeError('country code must be a number').required('Required'),
+  phone: yup.number().typeError('must be a number').required('Required'),
   birthday: yup.date()
 });
 
@@ -261,22 +261,22 @@ const StepTwo = (props) => {
 
         <div className="flex justify-between relative my-2">
             <Field className="w-[30%] border rounded h-[56px] py-2 px-3 text-gray-700 font-[400] text-[16px] leading-[24px] focus:outline-none focus:shadow-outline"  placeholder="+***" name='country_code' />
-            <ErrorMessage name='country_code' component='div' />
+            <ErrorMessage name='country_code' component='div' className="text-red-500 text-xs"/>
             <Field className="w-[65%] border rounded h-[56px] py-2 px-3 text-gray-700 font-[400] text-[16px] leading-[24px] focus:outline-none focus:shadow-outline"  placeholder="Phone Number" name='phone' />
             <ErrorMessage name="phone" component="div" className="text-red-500 text-xs" />
           </div>
 
           <div className="relative">
-            <Field className="border rounded w-full h-[56px] py-2 px-3 text-gray-700 font-[400] text-[16px] leading-[24px] focus:outline-none focus:shadow-outline"  type="date" placeholder="Birthday" name='birthday' />
-            <span className="absolute inset-y-0 right-0 pr-8 flex items-center">
+            <input className="border rounded w-full h-[56px] py-2 px-3 text-gray-700 font-[400] text-[16px] leading-[24px] focus:outline-none focus:shadow-outline"  type="date" placeholder="Birthday" name='birthday' />
+            <span className="absolute inset-y-0 right-0 mr-10 pr-[-2px] flex items-center">
                 Optional
             </span>
           </div>
           <span className='text-[13px] font-[400]'>Let us know about your birthday so as not to miss a gift</span>
         
         <div className="flex flex-auto items-center justify-center mt-2">
-          <button className="w-full bg-[#5932EA] hover:bg-[#9962EF] font-[700] py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline tracking-[0.15px] text-white" type="submit">
-            Save Information
+          <button  className="w-full h-[56px] bg-[#5932EA] hover:bg-[#9962EF] py-2 mt-4 px-4 rounded-xl focus:outline-none focus:shadow-outline tracking-[0.15px] text-white font-[700] text-[16px] leading-[24px]"  type="submit">
+           Save Information
           </button>
         </div>
                   
@@ -440,8 +440,8 @@ const StepFour = (props) => {
           <ErrorMessage name="zip_code" component="div" className="text-red-500 text-xs" />
         </div>
         <div className="flex flex-auto items-center justify-center" >
-          <button className="w-full bg-[#5932EA] hover:bg-[#9962EF] font-[700] py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline tracking-[0.15px] text-white" type="submit">
-          Save Information
+          <button  className="w-full h-[56px] bg-[#5932EA] hover:bg-[#9962EF] py-2 mt-4 px-4 rounded-xl focus:outline-none focus:shadow-outline tracking-[0.15px] text-white font-[700] text-[16px] leading-[24px]"  type="submit">
+             Save Information
           </button>
         </div>
 

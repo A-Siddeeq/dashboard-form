@@ -13,7 +13,7 @@ import headshot from './assets/headshot.png'
 
 const Dashboard = () => {
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(true);
 
     const toggleMenu = () => {
       setIsMenuOpen(!isMenuOpen);
@@ -21,53 +21,53 @@ const Dashboard = () => {
 
   return (
   //DESKTOP VIEW
-    <div className='h-svh flex  w-[900px]'>
-        <div className={`flex flex-col justify-between ${isMenuOpen ? 'w-[65px]' : ''}`}>
-        <div className='flex flex-col gap-y-2 w-[300px] '>
+    <div className='h-svh flex w-full xl:w-[900px]'>
+        <div className={`flex flex-col justify-between xl:justify-around ${isMenuOpen ? 'w-[65px]' : 'absolute bg-white xl:relative'}`}>
+        <div className='flex flex-col gap-y-2 w-max xl:w-[300px] '>
             <div className='flex gap-x-4 p-4' onClick={toggleMenu}>
-                <img src={settingsIcon} alt="" width={'37px'} />
+                <img src={settingsIcon} alt="" className='xl:w-[37px]'/>
                 <div>
-                    <h1 className='font-[600] text-[Poppins] tect-[36px] leading-[39px]'>Dashboard</h1>
+                    <h1 className={`font-[600] text-[Poppins] xl:text-[36px] xl:leading-[39px] ${isMenuOpen? 'hidden' : 'flex'}`}>Dashboard</h1>
                 </div>
             </div>
 
-            <div className='flex flex-col gap-y-4 p-4'>
-              <div className='flex gap-x-4 items-center px-2 hover:bg-[#5932EA] hover:text-white hover:cursor-pointer rounded-lg w-[250px] h-[46px]'>  
+            <div className={`flex flex-col gap-y-3 xl:gap-y-4 p-4 h-full ${isMenuOpen? 'hidden md:flex' : ''}`}>
+              <div className='flex gap-x-4 items-center p-2 hover:bg-[#5932EA] hover:text-white hover:cursor-pointer rounded-lg xl:w-[250px] xl:h-[46px]'>  
                 <img src={dashboardHome} alt=""/>
                 <p className='font-[400] text-[14px] leading-[21px] text-[#9197B3] hover:text-white'>Dashboard</p>
                 </div>
-                <div className='flex gap-x-4 items-center px-2 hover:bg-[#5932EA] hover:text-white hover:cursor-pointer rounded-lg w-[250px] h-[46px]'>  
+                <div className='flex gap-x-4 items-center p-2 hover:bg-[#5932EA] hover:text-white hover:cursor-pointer rounded-lg xl:w-[250px] xl:h-[46px]'>  
                 <img src={productIcon} alt="" />
                 <p className='font-[400] text-[14px] leading-[21px] text-[#9197B3]'>Product</p>
                 </div>             
-                <div className='flex gap-x-4 items-center px-2 hover:bg-[#5932EA] hover:text-white hover:cursor-pointer rounded-lg w-[250px] h-[46px]'>  
+                <div className='flex gap-x-4 items-center p-2 hover:bg-[#5932EA] hover:text-white hover:cursor-pointer rounded-lg xl:w-[250px] xl:h-[46px]'>  
                 <img src={customerIcon} alt="" className='text-green-600'/>
                 <p className='font-[400] text-[14px] leading-[21px] text-[#9197B3]'>Customer</p>
                 </div>             
-                <div className='flex gap-x-4 items-center px-2 hover:bg-[#5932EA] hover:text-white hover:cursor-pointer rounded-lg w-[250px] h-[46px]'>  
+                <div className='flex gap-x-4 items-center p-2 hover:bg-[#5932EA] hover:text-white hover:cursor-pointer rounded-lg xl:w-[250px] xl:h-[46px]'>  
                 <img src={incomeIcon} alt="" />
                 <p className='font-[400] text-[14px] leading-[21px] text-[#9197B3]'>Income</p>
                 </div>              
-                <div className='flex gap-x-4 items-center px-2 hover:bg-[#5932EA] hover:text-white hover:cursor-pointer rounded-lg w-[250px] h-[46px]'>  
+                <div className='flex gap-x-4 items-center p-2 hover:bg-[#5932EA] hover:text-white hover:cursor-pointer rounded-lg xl:w-[250px] xl:h-[46px]'>  
                 <img src={promoteIcon} alt="" />
                 <p className='font-[400] text-[14px] leading-[21px] text-[#9197B3]'>Promote</p>
                 </div>            
-                <div className='flex gap-x-4 items-center px-2 hover:bg-[#5932EA] hover:text-white hover:cursor-pointer rounded-lg w-[250px] h-[46px]'>  
+                <div className='flex gap-x-4 items-center p-2 hover:bg-[#5932EA] hover:text-white hover:cursor-pointer rounded-lg xl:w-[250px] xl:h-[46px]'>  
                 <img src={help} alt="" />
                 <p className='font-[400] text-[14px] leading-[21px] text-[#9197B3]'>Help</p>
                 </div>           
                  </div>
         </div>
 
-        <div className={`flex flex-col items-center gap-y-2 w-[300px] ${isMenuOpen ? 'hidden' : ''}`}>
+        <div className={`flex flex-col items-center gap-y-2 pl-2 xl:pl-0 xl:w-[300px] ${isMenuOpen ? 'hidden' : ''}`}>
 
-              <div className='flex flex-col justify-around items-center bg-gradient-to-r from-[#EAABF0] to-[#4623E9] rounded-[20px] w-[250px] h-[150px]'>  
+              <div className='flex flex-col justify-around items-center bg-gradient-to-r from-[#EAABF0] to-[#4623E9] rounded-[20px] w-[150px] xl:w-[250px] h-[120px] xl:h-[150px] p-3 xl:mt-[-20px]'>  
                 <p className='font-[600] text-[14px] leading-[21px] text-white text-center'>Upgrade to  PRO to get access all Features!</p>
-                <button className='h-[40px] w-[203px] bg-white rounded-[20px] font-[600] text-[14px] leading-[21px] text-center text-[#4925E9]'>Get PRO now</button>
+                <button className='xl:h-[40px] xl:w-[203px] bg-white rounded-[20px] font-[600] p-1 text-[12px] xl:text-[14px] leading-[21px] text-center text-[#4925E9]'>Get PRO now</button>
                 </div> 
 
                 <div className='flex items-center'>
-                    <img src={headshot} alt="profile picture" width={'42px'} height={'42px'} className='rounded-full'/>
+                    <img src={headshot} alt="profile picture" width={'42px'} height={'42px'} className='rounded-full mr-1'/>
                     <div className='py-[-2px]'>
                         <p className='font-[400] text-[14px] leading-[21px]'>Evano</p>
                         <span className='font-[400] text-[12px] leading-[18px] text-[#757575]'>Program Manager</span>
@@ -86,17 +86,17 @@ const Dashboard = () => {
 
         <div className='bg-[#FAFBFF] px-4'>
             <div className='flex justify-between p-4'>
-                <h1 className='font-[400] text-[24px] leading-[36px]'>Hello, Evano👋🏼,</h1>
+                <h1 className='font-[400] text-[24px] xl:leading-[36px]'>Hello, Evano👋🏼,</h1>
                 <div className="flex flex-col justify-center mb-4"> 
                 <img src={search} alt="" className='absolute ml-2'/>
-                <input className="rounded-xl w-[216px] h-[38px] py-2 px-3 text-[#B5B7C0] bg-white font-[400] text-[14px] leading-[21px] focus:outline-none focus:shadow-outline placeholder:pl-5"  placeholder="Search" />
+                <input className="rounded-xl xl:w-[216px] xl:h-[38px] py-2 px-3 text-[#B5B7C0] bg-white font-[400] text-[14px] leading-[21px] focus:outline-none focus:shadow-outline placeholder:pl-5"  placeholder="Search" />
              </div>
             </div>
 
-            <div className='flex justify-around'>
+            <div className='flex justify-start gap-x-1 xl:justify-between'>
                 <div className='flex gap-x-2'>
                     <div>
-                    <svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className='w-[55px] xl:w-[84px]' width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="42" cy="42" r="42" fill="url(#paint0_linear_2702_521)"/>
                         <path d="M38.0302 41.0229C37.8552 41.0054 37.6452 41.0054 37.4527 41.0229C33.2877 40.8829 29.9802 37.4704 29.9802 33.2704C29.9802 28.9829 33.4452 25.5004 37.7502 25.5004C42.0377 25.5004 45.5202 28.9829 45.5202 33.2704C45.5027 37.4704 42.1952 40.8829 38.0302 41.0229Z" stroke="#00AC4F" strokeWidth="2.625" stroke-linecap="round" strokeLinejoin="round"/>
                         <path d="M50.7171 28.9996C54.1121 28.9996 56.8421 31.7471 56.8421 35.1246C56.8421 38.4321 54.2171 41.1271 50.9446 41.2496C50.8046 41.2321 50.6471 41.2321 50.4896 41.2496" stroke="#00AC4F" strokeWidth="2.625" strokeLinecap="round" strokeLinejoin="round"/>
@@ -125,7 +125,7 @@ const Dashboard = () => {
                     </div>
                     
                     <div>
-                    <svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className='w-[55px] xl:w-[84px]' width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="42" cy="42" r="42" fill="url(#paint0_linear_2702_539)"/>
                     <path d="M46.0667 53.75L48.6 56.2833L53.6667 51.2167" stroke="#00AC4F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M42.2669 40.117C42.1003 40.1003 41.9003 40.1003 41.7169 40.117C37.7503 39.9836 34.6003 36.7336 34.6003 32.7336C34.5836 28.6503 37.9003 25.3336 41.9836 25.3336C46.0669 25.3336 49.3836 28.6503 49.3836 32.7336C49.3836 36.7336 46.2169 39.9836 42.2669 40.117Z" stroke="#00AC4F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -154,7 +154,7 @@ const Dashboard = () => {
                     </div>
 
                     <div>
-                    <svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className='w-[55px] xl:w-[84px]' width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="42" cy="42" r="42" fill="url(#paint0_linear_2702_556)"/>
                     <path d="M32.27 24.5H51.7125C57.9425 24.5 59.5 26.0575 59.5 32.27V43.3475C59.5 49.5775 57.9425 51.1175 51.73 51.1175H32.27C26.0575 51.135 24.5 49.5775 24.5 43.365V32.27C24.5 26.0575 26.0575 24.5 32.27 24.5Z" stroke="#00AC4F" stroke-width="2.625" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M42 51.1345V59.4995" stroke="#00AC4F" stroke-width="2.625" stroke-linecap="round" stroke-linejoin="round"/>
