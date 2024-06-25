@@ -20,9 +20,9 @@ const Dashboard = () => {
     }
 
   return (
-  //DESKTOP VIEW
+  
     <div className='h-svh flex w-full xl:w-[900px]'>
-        <div className={`flex flex-col justify-between xl:justify-around ${isMenuOpen ? 'w-[65px]' : 'absolute bg-white xl:relative'}`}>
+        <div className={`flex flex-col justify-between ${isMenuOpen ? 'w-[65px]' : 'absolute bg-white xl:relative'}`}>
         <div className='flex flex-col gap-y-2 w-max xl:w-[300px] '>
             <div className='flex gap-x-4 p-4' onClick={toggleMenu}>
                 <img src={settingsIcon} alt="" className='xl:w-[37px]'/>
@@ -61,7 +61,7 @@ const Dashboard = () => {
 
         <div className={`flex flex-col items-center gap-y-2 pl-2 xl:pl-0 xl:w-[300px] ${isMenuOpen ? 'hidden' : ''}`}>
 
-              <div className='flex flex-col justify-around items-center bg-gradient-to-r from-[#EAABF0] to-[#4623E9] rounded-[20px] w-[150px] xl:w-[250px] h-[120px] xl:h-[150px] p-3 xl:mt-[-20px]'>  
+              <div className='flex flex-col justify-around bg-gradient-to-r from-[#EAABF0] to-[#4623E9] rounded-[20px] w-[250px] h-[150px] p-3 xl:mt-[-20px]'>  
                 <p className='font-[600] text-[14px] leading-[21px] text-white text-center'>Upgrade to  PRO to get access all Features!</p>
                 <button className='xl:h-[40px] xl:w-[203px] bg-white rounded-[20px] font-[600] p-1 text-[12px] xl:text-[14px] leading-[21px] text-center text-[#4925E9]'>Get PRO now</button>
                 </div> 
@@ -93,8 +93,8 @@ const Dashboard = () => {
              </div>
             </div>
 
-            <div className='flex justify-start gap-x-1 xl:justify-between'>
-                <div className='flex gap-x-2'>
+            <div className='flex col-span-2 justify-center md:justify-start gap-x-1 xl:justify-between'>
+                <div className='flex flex-col md:flex-row md:gap-x-2 tracking-wide'>
                     <div>
                     <svg className='w-[55px] xl:w-[84px]' width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="42" cy="42" r="42" fill="url(#paint0_linear_2702_521)"/>
