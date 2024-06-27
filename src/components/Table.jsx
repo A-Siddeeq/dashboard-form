@@ -22,7 +22,7 @@ function Table() {
   );
 
   return (
-    <div className="flex flex-col xl:mx-12 bg-white xl:w-[900px]">
+    <div className="flex flex-col xl:mx-12 bg-white w-max lg:w-[900px]">
         <div className="flex items-center justify-between my-4">
             <div>
       <h1 className="font-[600] text-[14px] xl:text-[22px] leading-[33px]">All Customers</h1>
