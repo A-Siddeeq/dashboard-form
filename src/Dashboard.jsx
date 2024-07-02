@@ -86,15 +86,15 @@ const Dashboard = () => {
 
         <div className='bg-[#FAFBFF] px-4'>
             <div className='flex justify-between p-4'>
-                <h1 className='font-[400] text-[12px] md:text-[24px] xl:leading-[36px]'>Hello, Evano👋🏼,</h1>
+                <h1 className='font-[400] md:text-[24px] xl:leading-[36px]'>Hello, Evano👋🏼,</h1>
                 <div className="flex flex-col justify-center mb-4"> 
                 <img src={search} alt="" className='absolute ml-2'/>
                 <input className="rounded-xl w- xl:w-[216px] xl:h-[38px] py-2 px-3 text-[#B5B7C0] bg-white font-[400] text-[14px] leading-[21px] focus:outline-none focus:shadow-outline placeholder:pl-5"  placeholder="Search" />
              </div>
             </div>
 
-            <div className='flex justify-center md:justify-start gap-x-1 xl:justify-between'>
-                <div className='flex  md:flex-row md:gap-x-2 tracking-wide'>
+            <div className='flex justify-center md:justify-start gap-x-1 xl:justify-around xl:mx-12 items-center bg-white rounded-2xl mb-4 p-2 w-max lg:w-[900px]'>
+                <div className='flex md:gap-x-2 tracking-wide'>
                     <div>
                     <svg className='w-[55px] xl:w-[84px]' width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="42" cy="42" r="42" fill="url(#paint0_linear_2702_521)"/>

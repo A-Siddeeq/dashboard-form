@@ -22,7 +22,7 @@ function Table() {
   );
 
   return (
-    <div className="flex flex-col xl:mx-12 bg-white w-max lg:w-[900px]">
+    <div className="flex flex-col xl:mx-12 bg-white w-max lg:w-[900px] mb-12">
         <div className="flex items-center justify-between my-4">
             <div>
       <h1 className="font-[600] text-[14px] xl:text-[22px] leading-[33px]">All Customers</h1>
@@ -41,7 +41,7 @@ function Table() {
         </select>
       </div>
       </div>
-      <table className="min-w-full bg-white border ml-[-20px] border-gray-200">
+      <table className="min-w-full bg-white border border-gray-200 mx-2">
         <thead>
           <tr className="border-b border-b-[#EEEEEE]">
             <th className="font-[500] xl:text-[14px] xl:leading-[33px] text-[#B5B7C0]">Customer Name</th>
